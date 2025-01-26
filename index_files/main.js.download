@@ -1,0 +1,27 @@
+jQuery('document').ready(function($){
+
+   // ********************** DESIGNATION **********************//
+   var i = 0;
+   var txt = "PHP/WordPress Developer ";
+   var speed = 200;
+   var pauseTime = 2000;
+
+   function typeWriter() {
+      if (i < txt.length) {
+         document.getElementById("designation").innerHTML += txt.charAt(i);
+         i++;
+         setTimeout(typeWriter, speed);
+      } else {
+         setTimeout(resetAndRestart, pauseTime);
+      }
+   }
+
+   function resetAndRestart() {
+      i = 0;
+      document.getElementById("designation").innerHTML = ""; // Clear the content
+      setTimeout(typeWriter, speed); // Restart the typing animation
+   }
+
+   typeWriter();
+
+})
