@@ -1,0 +1,63 @@
+jQuery('document').ready(function($){
+   // ********************** DESIGNATION **********************//
+   var i = 0;
+   var txt = "PHP/Wordpress Developer";
+   var speed = 200;
+   var pauseTime = 2000;
+
+   function typeWriter() {
+      if (i < txt.length) {
+         document.getElementById("designation").innerHTML += txt.charAt(i);
+         i++;
+         setTimeout(typeWriter, speed);
+      } else {
+         setTimeout(resetAndRestart, pauseTime);
+      }
+   }
+
+   function resetAndRestart() {
+      i = 0;
+      document.getElementById("designation").innerHTML = ""; // Clear the content
+      setTimeout(typeWriter, speed); // Restart the typing animation
+   }
+
+   typeWriter();
+
+   $('.dark-mode-btn').on('click', function() {
+      // Check if the button has the 'dark-theme-activate' class
+      if ($(this).hasClass('dark-theme-activate')) {
+          // If the class is already present, it's in dark mode. Toggle to light mode.
+          $(this).removeClass('dark-theme-activate'); // Remove the dark theme class
+          $('body').css('background-color', 'unset'); // Light background
+          $('p, h3, h4, h2').css('color', 'black'); // Light text color
+          $('.single-project-wrapper').css({
+              'background-color': '#fafafa',
+              'border': '1px solid rgb(241, 241, 241)',
+          });
+      } else {
+          // If the class is not present, it's in light mode. Toggle to dark mode.
+          $(this).addClass('dark-theme-activate'); // Add the dark theme class
+          $('body').css('background-color', 'black'); // Dark background
+          $('p, h3, h4, h2').css('color', 'white'); // Dark text color
+          $('.single-project-wrapper').css({
+              'background-color': '#111821',
+              'border': 'unset',
+          });
+      }
+  });
+
+  // Wait until the window is loaded
+  window.addEventListener('load', function() {
+   // Delay hiding the preloader and showing main content for 5 seconds
+   setTimeout(function() {
+      // Hide preloader
+      document.getElementById('preloader').style.display = 'none';
+      
+      // Show main content
+      document.getElementById('main-content').style.display = 'block';
+   }, 3000); // 5000ms = 5 seconds
+});
+
+
+  
+})

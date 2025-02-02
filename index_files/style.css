@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a{
+    color: #ffff;
+    text-decoration: none;
+}
+.portfolio-main-wrapper{
+    width:100%;
+}
+.main-header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top:0;
+    padding: 1% 2%;
+    background-color: #54B689;
+    width:100%;
+    z-index: 999;   
+}
+.main-header-wrapper .portfolio-title h1{
+ color: #ffff;
+ font-size: 40px;
+}
+.main-header-wrapper .header-icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 20%;
+}
+.main-header-wrapper .header-icons a{
+    border-radius:50px !important;
+}
+.main-header-wrapper .header-icons a i{
+    font-size: 28px;
+    color: #ffff;
+    border-radius: 50px;
+}
+
+/* banner */
+.portfolio-banner-main-wrapper{
+    width: 100%;
+    padding: 1% 2%;
+}
+.portfolio-banner-inner-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:30px;
+    min-height: 80vh;
+}
+.banner-content-section{
+    flex-basis: 50%;
+}
+.banner-content-section h4{
+    font-size: 34px;
+    min-height: 64px;
+}
+.banner-content-section p{
+    font-size: 20px;
+    line-height: 30px;
+}
+.banner-content-section .my-resume {
+    margin-top: 30px;
+    padding: 15px 30px;
+    border-radius: 50px;  
+    width: fit-content;
+    background-color: #54B689;
+}
+.banner-content-section .my-resume a{
+    color: #ffff;
+    text-decoration: none;
+}
+
+.banner-img-bg{
+    margin-top:-500px;
+    height: 490px;
+    width: 100%;
+    background-color:#bbfadd ;
+    border: 1px solid #bbfadd;
+    border-radius: 50%;
+}
+/* skills */
+.skills-main-wrappper{
+    margin-top:30px;
+    padding: 1% 2%;
+}
+.portfolio-section-heading{
+    padding : 4px 8px;
+    margin-bottom: 20px;
+    border-left: 6px solid #54B689;
+}
+.portfolio-section-heading h3{
+    font-size: 28px;
+    line-height: 38px;
+}
+.skills-main-wrappper p{
+    font-size: 16px;
+    line-height: 24px;
+}
+.skills-list-wrapper{
+    display: flex;
+    justify-content: start;
+    gap:50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+}
+.skilll-content-main-wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+    max-width: 22%;
+}
+.skilll-content-main-wrapper .skill-image-section i{
+    font-size: 34px;
+    color:#266447;
+}
+.skilll-content-main-wrapper .skill-content-section h4{
+    font-size: 16px;
+    line-height: 24px;
+}
+.skilll-content-main-wrapper .skill-content-section p{
+    font-size: 14px;
+
+}
+/* projects */
+.protfolio-projects-main-wrapper{
+    margin-top: 30px;
+    padding: 1% 2%;
+    width: 100%;
+}
+.projects-list-main-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.single-project-wrapper{
+    display: flex;
+    width: 30%;
+    gap: 10px;
+    background-color: #fafafa;
+    border: 1px solid rgb(241, 241, 241);
+}
+.single-project-wrapper .project-image-section{
+    width: 90%;
+    height: 200px;
+}
+.single-project-wrapper .project-image-section img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.single-project-wrapper .project-content-section{
+    position: relative;
+    padding: 4px 8px;   
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.single-project-wrapper .project-content-section h3{
+    font-size: 16px;
+    line-height: 32px;
+}
+.single-project-wrapper .project-content-section p{
+    font-size: 14px;
+    line-height: 22px;
+}
+.single-project-wrapper .project-content-section span{
+    font-size: 14px;
+    line-height: 22px;
+    color: #0b4b2d;
+}
+.single-project-wrapper .project-content-section .view-button{
+    position: absolute;
+    top:90px;
+    left: 60px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background-color: #54B689;
+    font-size: 12px;
+    display: none;
+}
+
+.single-project-wrapper:hover{
+    background-color: #5f5e5e;
+    transition: all 0.4s ease-in-out;
+    
+}
+.single-project-wrapper:hover .project-content-section .view-button{
+    display: block;
+}
+/* footer */
+.portfolio-footer{
+    margin-top:50px;
+    padding: 10px 0;
+    width: 100%;
+    background-color: #54B689;
+    text-align: center;
+    color: #ffff;
+}
+@media screen and (max-width: 768px){
+    .portfolio-banner-inner-wrapper{
+        flex-direction: column-reverse;
+        gap:20px;
+    }
+    .banner-content-section{
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .main-header-wrapper{
+        padding: 4% 4%;
+    }
+    .main-header-wrapper .portfolio-title h1{
+        font-size: 18px;
+    }
+    .main-header-wrapper .header-icons{
+        width: 28%;
+    }
+    .main-header-wrapper .header-icons a i{
+        font-size: 16px;
+    }
+    /* banner */
+    .portfolio-banner-main-wrapper{
+        padding : 4%;
+    }
+    .portfolio-banner-inner-wrapper{
+        flex-direction: column-reverse;
+        gap:20px;
+    }
+    .banner-content-section{
+        flex-basis: 100%;
+    }
+    .banner-content-section h4{
+        font-size: 20px;
+        min-height: 30px;
+    }
+    .banner-content-section p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .banner-content-section .my-resume {
+        margin-top: 16px;
+        padding: 10px 20px;
+    }
+    .banner-content-section .my-resume a{
+        font-size: 14px;
+    }
+    .banner-profile-image img{
+        height: 300px;
+        width: 300px;
+    }
+    .banner-img-bg{
+        margin-top:-302px;
+        height: 300px;
+        width: 100%;
+    }
+
+    /* skills */
+    .skills-main-wrappper{
+        padding: 4%;
+    }
+    .portfolio-section-heading{
+        padding : 2px 8px;
+    }
+    .portfolio-section-heading h3{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .skills-main-wrappper p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .skills-list-wrapper{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .skilll-content-main-wrapper{
+        gap:5px;
+        max-width: 100%;
+    }
+    .skilll-content-main-wrapper .skill-image-section i{
+        font-size: 28px;
+    }
+    .portfolio-footer{
+        padding: 4%;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    /* projects */
+
+    .protfolio-projects-main-wrapper{
+        padding: 4%;
+    }
+    .projects-list-main-wrapper{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .single-project-wrapper{
+        width: 100%;
+    }
+    .single-project-wrapper .project-content-section h3{
+        line-height: 20px;
+    }
+}
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Make sure preloader is on top */
+    background-color: #266447;
+}
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1.154;
+    position: relative;
+    background: conic-gradient(from 120deg at 50% 64%,#0000, #ffffff 1deg 120deg,#0000 121deg);
+    animation: l27-0 1.5s infinite cubic-bezier(0.3,1,0,1);
+  }
+  .loader:before,
+  .loader:after {
+    content:'';
+    position: absolute;
+    inset:0;
+    background:inherit;
+    transform-origin: 50% 66%;
+    animation: l27-1 1.5s infinite;
+  }
+  .loader:after {
+    --s:-1;
+  }
+  @keyframes l27-0 {
+     0%,30%      {transform: rotate(0)}
+     70%         {transform: rotate(120deg)}
+     70.01%,100% {transform: rotate(360deg)}
+  }
+  @keyframes l27-1 {
+     0%      {transform: rotate(calc(var(--s,1)*120deg)) translate(0)}
+     30%,70% {transform: rotate(calc(var(--s,1)*120deg)) translate(calc(var(--s,1)*-5px),10px)}
+     100%    {transform: rotate(calc(var(--s,1)*120deg)) translate(0)}
+  }
