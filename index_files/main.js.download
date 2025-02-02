@@ -1,3 +1,14 @@
+$(window).on('load', function() {
+   // Delay hiding the preloader and showing the main content for 3 seconds
+   setTimeout(function() {
+       // Hide preloader
+       $('#preloader').fadeOut();
+       
+       // Show main content
+       $('#main-content').fadeIn();
+   }, 3000); // 3000ms = 3 seconds
+});
+
 jQuery('document').ready(function($){
    // ********************** DESIGNATION **********************//
    var i = 0;
@@ -44,20 +55,5 @@ jQuery('document').ready(function($){
               'border': 'unset',
           });
       }
-  });
-
-  // Wait until the window is loaded
-  window.addEventListener('load', function() {
-   // Delay hiding the preloader and showing main content for 5 seconds
-   setTimeout(function() {
-      // Hide preloader
-      document.getElementById('preloader').style.display = 'none';
-      
-      // Show main content
-      document.getElementById('main-content').style.display = 'block';
-   }, 3000); // 5000ms = 5 seconds
-});
-
-
-  
+  });  
 })
