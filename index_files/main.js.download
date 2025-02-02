@@ -6,7 +6,7 @@ $(window).on('load', function() {
        
        // Show main content
        $('#main-content').fadeIn();
-   }, 3000); // 3000ms = 3 seconds
+   }, 2000); // 2 seconds
 });
 
 jQuery('document').ready(function($){
